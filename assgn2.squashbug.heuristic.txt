@@ -1,0 +1,8 @@
+First we find PID's of parent, parent(parent), parent(parent(parent)) ...so on and store it in process vector.
+
+Then to find the malware we traverse through all processes in process vector and find
+parameter = (Sum of cpu times of all children of a process)/(cpu time of the process)
+
+The process with highest parameter value is considered as the root of malware 
+    *(If we get root as malware then we print no malware is present)
+    *(if cpu time of a process is 0 then the process is the root of all trouble)
